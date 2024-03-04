@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="com.mitsubishielectric.ada.permission.VEHICLE_RW"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClarityTools"
+        tools:targetApi="17">
+
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.vehiclecoordination.lib" />
+        <uses-library android:name="com.mitsubishielectric.uilib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.util.explog.lib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.appservice.avapservice.lib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.appmanagerservice.lib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.vehicleinfomanager.lib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.systeminfoservice.lib" />
+        <uses-library android:name="com.mitsubishielectric.ada.appservice.strgsw.lib" />
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ClarityTools">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
